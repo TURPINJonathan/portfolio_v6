@@ -24,19 +24,19 @@ ReactDOM.render(
           element={<Portfolio />}
         />
         <Route
-          path="/turpin-jonathan"
+          path="/j/history"
           element={<LetterJ />}
         />
         <Route
-          path="/turpin-jonathan/o"
+          path="/o/artWork"
           element={<LetterO />}
         />
         <Route
-          path="h/contact"
+          path="/h/contact"
           element={<LetterH />}
         />
         <Route
-          path="/turpin-jonathan/n"
+          path="/n/skills"
           element={<LetterN />}
         />
       </Routes>
