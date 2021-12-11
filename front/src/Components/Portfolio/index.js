@@ -1,8 +1,7 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
 
-//imports
-import LetterJ from "../LetterJ";
+// imports
+import './portfolio.scss';
 
 const Portfolio = () => {
     return (
