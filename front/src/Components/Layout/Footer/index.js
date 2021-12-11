@@ -26,8 +26,7 @@ const Footer = () => {
             </a>
             <NavLink
                 to="/h/contact"
-                className="letterJ"
-                activeClassName="letterJ-active"
+                className="contact"
                 exact
             >
                 <Mail color="#1231bd" />

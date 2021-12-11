@@ -11,7 +11,6 @@ const Nav = () => {
                 end
                 to="/j/history"
                 className="letterJ"
-                // activeClassName="letterJ-active"
                 exact
             >
                 J
@@ -19,7 +18,6 @@ const Nav = () => {
             <NavLink
                 to="/o/artWork"
                 className="letterO"
-                activeClassName="letterO-active"
                 exact
             >
                 O
@@ -27,7 +25,6 @@ const Nav = () => {
             <NavLink
                 to="/h/contact"
                 className="letterH"
-                activeClassName="letterH-active"
                 exact
             >
                 H
@@ -35,7 +32,6 @@ const Nav = () => {
             <NavLink
                 to="/n/skills"
                 className="letterN"
-                activeClassName="letterN-active"
                 exact
             >
                 N

@@ -1,5 +1,6 @@
 @use 'src/styles/vars';
 
+// Animations
 @keyframes JColorationHover {
     from {
         color: transparent;
@@ -88,6 +89,7 @@
     }
 }
 
+// Letters's styles
 .letterJ {
     transition-duration: 1s;
     -webkit-text-stroke: 2px vars.$JLetter;
@@ -114,7 +116,6 @@
         transform: rotateZ(-15deg);
     }
 }
-
 
 .letterO {
     transition-duration: 1s;
