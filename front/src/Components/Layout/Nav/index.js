@@ -8,7 +8,6 @@ const Nav = () => {
     return (
         <header>
             <NavLink
-                end
                 to="/j/history"
                 className="letterJ"
                 exact

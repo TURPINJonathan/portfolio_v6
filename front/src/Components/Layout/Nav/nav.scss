@@ -4,7 +4,7 @@
 @keyframes JColorationHover {
     from {
         color: transparent;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -moz-transform: none;
         -webkit-transform: none;
         -o-transform: none;
@@ -14,7 +14,7 @@
 
     to {
         color: vars.$JLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateZ(-375deg);
         -moz-transform: rotateZ(-375deg);
         -ms-transform: rotateZ(-375deg);
@@ -26,7 +26,7 @@
 @keyframes OColorationHover {
     from {
         color: transparent;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateX(0deg);
         -moz-transform: rotateX(0deg);
         -ms-transform: rotateX(0deg);
@@ -36,7 +36,7 @@
 
     to {
         color: vars.$OLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateX(-360deg);
         -moz-transform: rotateX(-360deg);
         -ms-transform: rotateX(-360deg);
@@ -48,7 +48,7 @@
 @keyframes HColorationHover {
     from {
         color: transparent;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateZ(0deg);
         -moz-transform: rotateZ(0deg);
         -ms-transform: rotateZ(0deg);
@@ -58,7 +58,7 @@
 
     to {
         color: vars.$HLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateZ(-345deg);
         -moz-transform: rotateZ(-345deg);
         -ms-transform: rotateZ(-345deg);
@@ -70,7 +70,7 @@
 @keyframes NColorationHover {
     from {
         color: transparent;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateZ(0deg);
         -moz-transform: rotateZ(0deg);
         -ms-transform: rotateZ(0deg);
@@ -80,7 +80,7 @@
 
     to {
         color: vars.$NLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateZ(-375deg);
         -moz-transform: rotateZ(-375deg);
         -ms-transform: rotateZ(-375deg);
@@ -97,7 +97,7 @@
     &:hover {
         animation: JColorationHover 1s;
         color: vars.$JLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateZ(-15deg);
         -moz-transform: rotateZ(-15deg);
         -ms-transform: rotateZ(-15deg);
@@ -108,7 +108,7 @@
      &.active {
         animation: JColorationHover 1s;
         color: vars.$JLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateZ(-15deg);
         -moz-transform: rotateZ(-15deg);
         -ms-transform: rotateZ(-15deg);
@@ -124,7 +124,7 @@
     &:hover {
         animation: OColorationHover 1s;
         color: vars.$OLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateX(-360deg);
         -moz-transform: rotateX(-360deg);
         -ms-transform: rotateX(-360deg);
@@ -135,7 +135,7 @@
     &.active {
         animation: OColorationHover 1s;
         color: vars.$OLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateX(-360deg);
         -moz-transform: rotateX(-360deg);
         -ms-transform: rotateX(-360deg);
@@ -151,7 +151,7 @@
     &:hover {
         animation: HColorationHover 1s;
         color: vars.$HLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateZ(15deg);
         -moz-transform: rotateZ(15deg);
         -ms-transform: rotateZ(15deg);
@@ -161,7 +161,7 @@
     &.active {
         animation: HColorationHover 1s;
         color: vars.$HLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateZ(15deg);
         -moz-transform: rotateZ(15deg);
         -ms-transform: rotateZ(15deg);
@@ -177,7 +177,7 @@
     &:hover {
         animation: NColorationHover 1s;
         color: vars.$NLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateZ(-15deg);
         -moz-transform: rotateZ(-15deg);
         -ms-transform: rotateZ(-15deg);
@@ -188,7 +188,7 @@
     &.active {
         animation: NColorationHover 1s;
         color: vars.$NLetter;
-        -webkit-text-stroke: 1px rgb(194, 194, 194);
+        -webkit-text-stroke: 1px vars.$grey;
         -webkit-transform: rotateZ(-15deg);
         -moz-transform: rotateZ(-15deg);
         -ms-transform: rotateZ(-15deg);
