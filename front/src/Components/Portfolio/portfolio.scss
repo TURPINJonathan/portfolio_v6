@@ -1,4 +1,35 @@
 @use 'src/styles/vars';
 
-// main {
-// }
+main {
+
+    #mainPage {
+        width: 100%;
+        min-height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        h1 {
+            font-family: vars.$Allison;
+            font-size: 10rem;
+            text-shadow: 1px 3px 0 #969696, 1px 8px 5px vars.$grey;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+    }
+
+    #mainCatch {
+           font-family: vars.$Belle; 
+           font-size: 1.5rem;
+           color: vars.$grey;
+           text-align: center;
+        //    width: 100%;
+        //    display: flex;
+        //    justify-content: space-around;
+        //    align-content: space-around;        
+    }
+}
