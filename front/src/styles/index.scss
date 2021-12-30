@@ -36,6 +36,30 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+
+    button {
+      width: 10rem;
+      height: 2rem;
+      border: none;
+      border-radius: 5px;
+      text-transform: uppercase;
+      box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
+      -webkit-box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
+      -moz-box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
+      color: vars.$grey;
+      font-weight: bold;
+    }
+    .true {
+      background-color: vars.$GButton;
+    }
+
+    .false {
+      background-color: vars.$FButton;
+    }
+
+    .reset {
+      background-color: vars.$RButton;
+    }
   }
 
   footer {
