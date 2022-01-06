@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // imports
 import './letterO.scss';
@@ -16,16 +17,17 @@ const LetterO = () => {
                     <h3 className="card__title">nom du site</h3>
                     <img className="card__picture" src="https://via.placeholder.com/300x200" alt="nom du site" />
                     <p className="card__overview">description du site</p>
-                    <button className="card__details" >Détails</button>
-                </article>
-                <article className="card">
-                    <h3 className="card__title">nom du site</h3>
-                    <img className="card__picture" src="https://via.placeholder.com/300x200" alt="nom du site" />
-                    <p className="card__overview">description du site</p>
-                    <button className="card__details" >Détails</button>
+
+                    <Link className="card__details" to="/o/artWork/test">
+                        <button className="card__details">Détails</button>
+                    </Link>
                 </article>
             </section>
-            <button className="reset">Page d'accueil</button>
+            <Link
+                to="/portfolio"
+            >
+                <button className="reset">Page d'accueil</button>
+            </Link>
         </main>
     );
 };

@@ -9,6 +9,7 @@ const Footer = () => {
     return (
         <footer id="footer">
             <a
+                className="footer__link"
                 href="https://github.com/TURPINJonathan"
                 target="_blank"
                 exact
@@ -17,6 +18,7 @@ const Footer = () => {
                 <GitHub color="#0da30d" />
             </a>
             <a
+                className="footer__link"
                 href="https://www.linkedin.com/in/turpin-jonathan"
                 target="_blank"
                 exact
@@ -26,10 +28,10 @@ const Footer = () => {
             </a>
             <NavLink
                 to="/h/contact"
-                className="contact"
+                className="contact footer_link"
                 exact
             >
-                <Mail color="#1231bd" />
+                <Mail color="#1231bd" className="footer__link" />
             </NavLink>
         </footer>
     );
