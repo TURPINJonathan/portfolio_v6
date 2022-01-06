@@ -24,7 +24,7 @@ const LetterO = () => {
                 </article>
             </section>
             <Link
-                to="/portfolio"
+                to="/"
             >
                 <button className="reset">Page d'accueil</button>
             </Link>
