@@ -27,9 +27,13 @@ class Skill
     #[ORM\ManyToMany(targetEntity: Project::class, mappedBy: 'skills')]
     private $projects;
 
+    #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'skills')]
+    private $users;
+
     public function __construct()
     {
         $this->projects = new ArrayCollection();
+        $this->users = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -95,6 +99,33 @@ class Skill
     {
         if ($this->projects->removeElement($project)) {
             $project->removeSkill($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getUsers(): Collection
+    {
+        return $this->users;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->users->contains($user)) {
+            $this->users[] = $user;
+            $user->addSkill($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        if ($this->users->removeElement($user)) {
+            $user->removeSkill($this);
         }
 
         return $this;
