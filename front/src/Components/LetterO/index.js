@@ -19,7 +19,7 @@ const LetterO = () => {
                     <p className="card__overview">description du site</p>
 
                     <Link className="card__details" to="/o/artWork/test">
-                        <button className="card__details">Détails</button>
+                        <button className="card__details true">Détails</button>
                     </Link>
                 </article>
             </section>

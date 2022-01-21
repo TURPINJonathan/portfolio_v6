@@ -12,8 +12,28 @@ main {
 
         h1 {
             font-family: vars.$Allison;
-            font-size: 10rem;
-            text-shadow: 1px 3px 0 #969696, 1px 8px 5px vars.$grey;
+            font-size: 12rem;
+                text-shadow: 1px 1px vars.$grey, -1px -1px black;
+            // text-shadow: 1px 3px 0 #969696, 1px 8px 5px vars.$grey;
+
+            #j1, #t5, #t10, #i14 {
+                color: vars.$JLetter;
+                // text-shadow:  inset -2px -2px vars.$grey;
+                
+            // text-shadow: 10px 10px 0 #969696, -10px -10px -10px vars.$grey;
+            }
+
+            #o2, #h6, #u11, #n15 {
+                color: vars.$OLetter;
+            }
+            
+            #n3, #a7, #r12 {
+                color: vars.$HLetter;
+            }
+            
+            #a4, #n8, #p13 {
+                color: vars.$NLetter;
+            }
         }
 
         p {

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // imports
 import './artWorkDetails.scss';
@@ -22,8 +23,16 @@ const ArtWorkDetails = () => {
                 </article>
             </section>
             <section id="buttons">
-                <button className="reset">Page d'accueil</button>
-                <button className="true">Page projets</button>
+                <Link
+                    to="/"
+                >
+                    <button className="reset">Page d'accueil</button>
+                </Link>
+                <Link
+                    to="/o/artWork/"
+                >
+                    <button className="true">Page projets</button>
+                </Link>
             </section>
         </main>
     );

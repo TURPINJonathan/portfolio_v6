@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // imports
 import './letterH.scss';
@@ -56,7 +57,11 @@ const LetterH = () => {
                 <div className="buttons">
                     <button className="true" type="submit">Envoyer</button>
                     <button className="reset" type="reset">Réinitialiser</button>
-                    <button className="false" type="button">Annuler</button>
+                    <Link
+                        to="/"
+                    >
+                        <button className="false" type="button">Annuler</button>
+                    </Link>
                 </div>
             </form>
             <p className="required">* Champs obligatoires</p>
