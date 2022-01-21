@@ -35,6 +35,11 @@ class UserCrudController extends AbstractCrudController
             UrlField::new('link_github'),
             UrlField::new('link_linkedin'),
             UrlField::new('link_twitter'),
+            UrlField::new('link_facebook'),
+            UrlField::new('link_instagram'),
+            UrlField::new('link_twitch'),
+            UrlField::new('link_discord'),
+            UrlField::new('link_tiktok'),
         ];
     }
 
