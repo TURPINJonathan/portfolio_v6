@@ -1,0 +1,83 @@
+@use 'src/styles/vars';
+
+main {
+
+    #mainPage {
+        width: 100%;
+        min-height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        h1 {
+            font-family: vars.$Allison;
+            font-size: 12rem;
+                text-shadow: 1px 1px vars.$grey, -1px -1px black;
+            // text-shadow: 1px 3px 0 #969696, 1px 8px 5px vars.$grey;
+
+            #j1, #t5, #t10, #i14 {
+                color: vars.$JLetter;
+                // text-shadow:  inset -2px -2px vars.$grey;
+                
+            // text-shadow: 10px 10px 0 #969696, -10px -10px -10px vars.$grey;
+            }
+
+            #o2, #h6, #u11, #n15 {
+                color: vars.$OLetter;
+            }
+            
+            #n3, #a7, #r12 {
+                color: vars.$HLetter;
+            }
+            
+            #a4, #n8, #p13 {
+                color: vars.$NLetter;
+            }
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+    }
+
+    #mainCatch {
+           font-family: vars.$Belle; 
+           font-size: 1.5rem;
+           color: vars.$grey;
+           text-align: center;      
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+      #mainPage {
+          h1 {
+              font-size: 7rem;
+          }
+
+          p {
+              font-size: 1.5rem;
+          }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+      main {
+        #mainPage {
+            h1 {
+                font-size: 5rem;
+            }
+  
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        #mainCatch {
+            font-size: 1rem;
+        }
+      }
+    }

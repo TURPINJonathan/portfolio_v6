@@ -1,12 +1,52 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import './styles/index.scss';
+
+// import components
+import Portfolio from './Components/Portfolio';
+import LetterJ from './Components/LetterJ';
+import LetterO from './Components/LetterO';
+import LetterH from './Components/LetterH';
+import LetterN from './Components/LetterN';
+import Nav from './Components/Layout/Nav';
+import Footer from './Components/Layout/Footer';
+import ArtWorkDetails from './Components/LetterO/ArtWorkDetails';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Nav />
+      <Routes>
+        <Route
+          path="/"
+          element={<Portfolio />}
+        />
+        <Route
+          path="/j/history"
+          element={<LetterJ />}
+        />
+        <Route
+          path="/o/artWork"
+          element={<LetterO />}
+        />
+        <Route
+          path="/o/artWork/test"
+          element={<ArtWorkDetails />}
+        />
+        <Route
+          path="/h/contact"
+          element={<LetterH />}
+        />
+        <Route
+          path="/n/skills"
+          element={<LetterN />}
+        />
+      </Routes>
+      <Footer />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

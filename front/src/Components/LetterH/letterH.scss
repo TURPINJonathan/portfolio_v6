@@ -1,0 +1,129 @@
+@use 'src/styles/vars';
+
+main {
+    form {
+        width: 60vw;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        fieldset {
+            border: vars.$grey solid 1px;
+            border-radius: 5px;
+            width: 100%;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            margin: 0.4rem;
+
+            legend {
+                font-size: 1.5rem;
+                font-weight: 800;
+                color: vars.$grey;
+                border: vars.$grey solid 1px;
+                border-radius: 5px;
+                padding: 1rem;
+                margin: auto;
+            }
+
+            .contactDetails {
+                width: 100%;
+                display: flex;
+                align-items: stretch;
+                justify-content: center;
+
+                .contactDetails__input {
+                    width: 100%;
+                    margin: 0.5rem auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                }
+
+            }
+
+            .contactDetails__message {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: center;
+
+                .contactDetails__input {
+                    width: 100%;
+                    margin: 0.5rem auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    textarea {
+                        height: 10rem;
+                    }
+                }
+            }
+            
+            label {
+                font-size: 1.2rem;
+                color: vars.$grey;
+                margin: 0.5rem;
+            }
+            input, textarea {
+                width: 80%;
+                padding: 0.5rem;
+                margin: 0.3rem;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
+                -moz-box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
+                outline-style: none;
+                font-family: vars.$Poppins;
+
+                &:focus {
+                    box-shadow: inset 0 0 25px rgba(0,0,0,.5);
+                }
+
+                &::placeholder {
+                    font-style: italic;
+                    padding-left: 1rem;
+                }
+            }
+        }
+
+        .buttons {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    .required {
+        font-style: italic;
+        font-size: 0.8rem;
+        margin: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        form {
+            width: 90vw;
+        }
+    }
+}
+    
+@media screen and (max-width: 550px) {
+    main {
+        form {
+            width: 95vw;
+
+            .contactDetails {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

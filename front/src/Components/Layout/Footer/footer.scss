@@ -1,0 +1,25 @@
+@use 'src/styles/vars';
+
+// Animations
+@keyframes linkAnim {
+    from {
+        min-width: 3rem;
+        min-height: 3rem;
+    }
+
+    to {
+        min-width: 6rem;
+        min-height: 6rem;
+    }
+}
+
+.footer__link>* {
+    min-width: 3rem;
+    min-height: 3rem;
+
+    &:hover {
+        animation: linkAnim 0.5s;
+        min-width: 6rem;
+        min-height: 6rem;
+    }
+}
