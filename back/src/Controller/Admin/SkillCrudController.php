@@ -22,4 +22,9 @@ class SkillCrudController extends AbstractCrudController
         ];
     }
     */
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 }
