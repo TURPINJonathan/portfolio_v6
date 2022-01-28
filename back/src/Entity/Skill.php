@@ -34,6 +34,9 @@ class Skill
     #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'skills')]
     private $users;
 
+    #[ORM\Column(type: 'string', length: 10)]
+    private $knowledge;
+
     public function __construct()
     {
         $this->projects = new ArrayCollection();
@@ -139,5 +142,17 @@ class Skill
     public function __toString()
     {
         return $this->name;
+    }
+
+    public function getKnowledge(): ?string
+    {
+        return $this->knowledge;
+    }
+
+    public function setKnowledge(string $knowledge): self
+    {
+        $this->knowledge = $knowledge;
+
+        return $this;
     }
 }
