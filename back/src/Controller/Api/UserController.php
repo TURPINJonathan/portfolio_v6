@@ -2,10 +2,11 @@
 
 namespace App\Controller\Api;
 
+use App\Entity\User;
 use App\Repository\UserRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class UserController extends AbstractController
 {
@@ -19,5 +20,11 @@ class UserController extends AbstractController
             [],
             ['groups' => 'users_get']
         );
+    }
+
+    #[Route('/api/users/{id<\d+>}', name: 'api_users_get_item', methods: 'GET')]
+    public function getItem(User $user): Response
+    {
+        return $this->json($user, Response::HTTP_OK, [], ['groups' => 'users_get']);
     }
 }
