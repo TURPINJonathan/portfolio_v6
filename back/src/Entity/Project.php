@@ -53,6 +53,10 @@ class Project
     #[Groups("projects_get")]
     private $updatedAt;
 
+    #[ORM\Column(type: 'boolean')]
+    #[Groups("projects_get")]
+    private $status;
+
     public function __construct()
     {
         $this->skills = new ArrayCollection();
@@ -179,6 +183,18 @@ class Project
     public function setUpdatedAt(?\DateTimeImmutable $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getStatus(): ?bool
+    {
+        return $this->status;
+    }
+
+    public function setStatus(bool $status): self
+    {
+        $this->status = $status;
 
         return $this;
     }

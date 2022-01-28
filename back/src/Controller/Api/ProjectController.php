@@ -11,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ProjectController extends AbstractController
 {
+    //? Find all projects
     #[Route('/api/projects', name: 'api_projects_get', methods: 'GET')]
     public function GetCollection(ProjectRepository $projectRepository): Response
     {
@@ -23,6 +24,7 @@ class ProjectController extends AbstractController
         );
     }
 
+    //? Find a project by id
     #[Route('/api/projects/{id<\d+>}', name: 'api_projects_get_item', methods: 'GET')]
     public function getItem(Project $project): Response
     {
