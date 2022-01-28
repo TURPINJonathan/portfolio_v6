@@ -2,10 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\SkillRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\SkillRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: SkillRepository::class)]
 class Skill
@@ -16,12 +17,15 @@ class Skill
     private $id;
 
     #[ORM\Column(type: 'string', length: 50)]
+    #[Groups("users_get")]
     private $name;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups("users_get")]
     private $picture;
 
     #[ORM\Column(type: 'string', length: 10)]
+    #[Groups("users_get")]
     private $type;
 
     #[ORM\ManyToMany(targetEntity: Project::class, mappedBy: 'skills')]
