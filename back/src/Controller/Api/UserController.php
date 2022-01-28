@@ -10,12 +10,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class UserController extends AbstractController
 {
-    #[Route('/api/users', name: 'api_user_get', methods: 'GET')]
+    #[Route('/api/users', name: 'api_users_get', methods: 'GET')]
     public function GetCollection(UserRepository $userRepository): Response
     {
-        $user = $userRepository->findAll();
+        $users = $userRepository->findAll();
         return $this->json(
-            [$user],
+            [$users],
             Response::HTTP_OK,
             [],
             ['groups' => 'users_get']

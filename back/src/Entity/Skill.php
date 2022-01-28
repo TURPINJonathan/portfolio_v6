@@ -17,15 +17,15 @@ class Skill
     private $id;
 
     #[ORM\Column(type: 'string', length: 50)]
-    #[Groups("users_get")]
+    #[Groups(["users_get", "projects_get"])]
     private $name;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Groups("users_get")]
+    #[Groups(["users_get", "projects_get"])]
     private $picture;
 
     #[ORM\Column(type: 'string', length: 10)]
-    #[Groups("users_get")]
+    #[Groups(["users_get", "projects_get"])]
     private $type;
 
     #[ORM\ManyToMany(targetEntity: Project::class, mappedBy: 'skills')]
