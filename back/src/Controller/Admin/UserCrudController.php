@@ -6,7 +6,6 @@ use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\UrlField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
@@ -23,7 +22,7 @@ class UserCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id')->hideOnForm(),
+            IdField::new('id')->hideOnForm()->hideOnIndex(),
             EmailField::new('email'),
             Field::new('password')->hideOnIndex(),
             ChoiceField::new('roles')->setChoices(['Administrateur' => 'ROLE_ADMIN'])->allowMultipleChoices(),

@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
@@ -18,6 +19,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $id;
 
     #[ORM\Column(type: 'string', length: 180, unique: true)]
+    #[Groups("users_get")]
     private $email;
 
     #[ORM\Column(type: 'json')]
@@ -27,42 +29,55 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $password;
 
     #[ORM\Column(type: 'string', length: 10)]
+    #[Groups("users_get")]
     private $firstname;
 
     #[ORM\Column(type: 'string', length: 20)]
+    #[Groups("users_get")]
     private $lastname;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups("users_get")]
     private $picture;
 
     #[ORM\Column(type: 'text')]
+    #[Groups("users_get")]
     private $description;
 
     #[ORM\ManyToMany(targetEntity: Skill::class, inversedBy: 'users')]
+    #[Groups("users_get")]
     private $skills;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups("users_get")]
     private $linkGithub;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups("users_get")]
     private $linkFacebook;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups("users_get")]
     private $linkInstagram;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups("users_get")]
     private $linkLinkedin;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups("users_get")]
     private $linkDiscord;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups("users_get")]
     private $linkTwitter;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups("users_get")]
     private $linkTwitch;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups("users_get")]
     private $linkTiktok;
 
     public function __construct()
