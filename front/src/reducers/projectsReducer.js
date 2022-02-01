@@ -1,4 +1,4 @@
-import { FETCH_PROJECTS } from "../actions/projects";
+import { SAVE_PROJECTS } from "../actions/projects";
 
 const initialState = {
     projects: [],
@@ -6,10 +6,10 @@ const initialState = {
 
 function projectsReducer(state = initialState, action = {}) {
     switch (action.type) {
-        case FETCH_PROJECTS:
+        case SAVE_PROJECTS:
             return {
                 ...state,
-                projects: action.projects,
+                projects: action.newValue,
             };
         default:
             return state;

@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // imports
 import './letterO.scss';
 
-const LetterO = ({ loadProjects }) => {
-    console.log(loadProjects());
+const LetterO = ({ loadProjects, projects }) => {
+    useEffect(() => {
+        loadProjects();
+    }, []);
+    console.log(projects);
     return (
 
         // TODO: Make the media queries
