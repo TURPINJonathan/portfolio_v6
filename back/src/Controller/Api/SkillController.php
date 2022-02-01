@@ -17,7 +17,7 @@ class SkillController extends AbstractController
     {
         $skills = $skillRepository->findAll();
         return $this->json(
-            [$skills],
+            $skills,
             Response::HTTP_OK,
             [],
             ['groups' => 'skills_get']

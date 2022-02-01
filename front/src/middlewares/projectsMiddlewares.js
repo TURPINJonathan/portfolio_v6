@@ -8,7 +8,6 @@ const projectsMiddlewares = (store) => (next) => (action) => {
         case FETCH_PROJECTS:
             axios.get(`${url}api/projects`)
                 .then((response) => {
-                    console.log(response.data);
                     store.dispatch(saveProjects(response.data));
                 });
             break;
