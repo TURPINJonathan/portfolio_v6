@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 // imports
 import './letterO.scss';
 
-const LetterO = () => {
+const LetterO = ({ loadProjects }) => {
+    console.log(loadProjects());
     return (
 
         // TODO: Make the media queries
