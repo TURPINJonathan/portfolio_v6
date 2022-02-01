@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import store from './store';
 
 import './styles/index.scss';
 
 // import components
 import Portfolio from './Components/Portfolio';
 import LetterJ from './Components/LetterJ';
-import LetterO from './Components/LetterO';
+import LetterO from './containers/LetterO';
 import LetterH from './Components/LetterH';
 import LetterN from './Components/LetterN';
 import Nav from './Components/Layout/Nav';
@@ -17,36 +20,38 @@ import ArtWorkDetails from './Components/LetterO/ArtWorkDetails';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Nav />
-      <Routes>
-        <Route
-          path="/"
-          element={<Portfolio />}
-        />
-        <Route
-          path="/j/history"
-          element={<LetterJ />}
-        />
-        <Route
-          path="/o/artWork"
-          element={<LetterO />}
-        />
-        <Route
-          path="/o/artWork/test"
-          element={<ArtWorkDetails />}
-        />
-        <Route
-          path="/h/contact"
-          element={<LetterH />}
-        />
-        <Route
-          path="/n/skills"
-          element={<LetterN />}
-        />
-      </Routes>
-      <Footer />
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Nav />
+        <Routes>
+          <Route
+            path="/"
+            element={<Portfolio />}
+          />
+          <Route
+            path="/j/history"
+            element={<LetterJ />}
+          />
+          <Route
+            path="/o/artWork"
+            element={<LetterO />}
+          />
+          <Route
+            path="/o/artWork/test"
+            element={<ArtWorkDetails />}
+          />
+          <Route
+            path="/h/contact"
+            element={<LetterH />}
+          />
+          <Route
+            path="/n/skills"
+            element={<LetterN />}
+          />
+        </Routes>
+        <Footer />
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
