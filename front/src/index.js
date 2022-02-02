@@ -10,7 +10,7 @@ import './styles/index.scss';
 
 // import components
 import Portfolio from './Components/Portfolio';
-import LetterJ from './Components/LetterJ';
+import LetterJ from './containers/LetterJ';
 import LetterO from './containers/LetterO';
 import LetterH from './Components/LetterH';
 import LetterN from './Components/LetterN';
