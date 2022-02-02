@@ -25,7 +25,6 @@ const LetterJ = ({ loadUsers, users }) => {
                     </aside>
                     <img src={user.picture} alt={`${user.firstname} ${user.lastname}`} id="tj-picture" />
                 </article>
-
             ))}
             <Link
                 to="/"

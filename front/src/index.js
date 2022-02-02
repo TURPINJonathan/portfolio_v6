@@ -13,7 +13,7 @@ import Portfolio from './Components/Portfolio';
 import LetterJ from './containers/LetterJ';
 import LetterO from './containers/LetterO';
 import LetterH from './Components/LetterH';
-import LetterN from './Components/LetterN';
+import LetterN from './containers/LetterN';
 import Nav from './Components/Layout/Nav';
 import Footer from './Components/Layout/Footer';
 import ArtWorkDetails from './Components/LetterO/ArtWorkDetails';
