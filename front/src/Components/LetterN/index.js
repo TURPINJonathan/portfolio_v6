@@ -11,10 +11,12 @@ const LetterN = ({ loadSkills, skills }) => {
         <main>
             <h2>Skills</h2>
             <article>
-                <ul>
+                <ul className="skillsList">
                     {skills.map(skill => (
-                        <li>
-                            <img src={skill.picture} alt={skill.name} />
+
+                        <li className="skillsList__details">
+                            <img src={skill.picture} alt={skill.name} className="skill__picture" />
+                            <p className="skill__name">{skill.name}</p>
                         </li>
                     ))}
                 </ul>

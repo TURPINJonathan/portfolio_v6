@@ -28,6 +28,19 @@ main {
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
+
+            .project__technoList {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                .skill__picture {
+                    width: 40px;
+                    height: 40px;
+                    margin: 0.5rem;
+                }
+            }
         }
     }
 

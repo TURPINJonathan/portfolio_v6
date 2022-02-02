@@ -16,7 +16,7 @@ import LetterH from './Components/LetterH';
 import LetterN from './containers/LetterN';
 import Nav from './Components/Layout/Nav';
 import Footer from './Components/Layout/Footer';
-import ArtWorkDetails from './Components/LetterO/ArtWorkDetails';
+import ArtWorkDetails from './containers/LetterO/ArtWorkDetails';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -37,7 +37,7 @@ ReactDOM.render(
             element={<LetterO />}
           />
           <Route
-            path="/o/artWork/test"
+            path="/o/artWork/:slug"
             element={<ArtWorkDetails />}
           />
           <Route
