@@ -16,8 +16,8 @@ main {
             border-radius: 5px;
             padding: 1rem 0;
             margin: 0.5rem;
-            width: 400px;
-            box-sizing: border-box;
+            width: 350px;
+            height: 550px;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -30,8 +30,6 @@ main {
                 font-size: 1.5rem;
                 font-weight: 800;
                 color: vars.$grey;
-                padding-bottom: 1rem;
-                margin: auto;
             }
 
             .card__picture {
@@ -40,16 +38,11 @@ main {
 
             .card__overview {
                 color: vars.$grey;
-                height: 4rem;
                 width: 100%;
                 text-align: center;
                 margin: 0.5rem;
                 overflow: hidden;
                 text-overflow: ellipsis;
-            }
-
-            .card__details {
-
             }
         }
     }

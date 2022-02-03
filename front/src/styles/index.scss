@@ -18,6 +18,7 @@ body {
   justify-content: space-between;
   overflow: hidden;
   font-family: vars.$Poppins;
+  line-height: 1.5rem;
 
   header{
     display: flex;
@@ -59,14 +60,30 @@ body {
     }
     .true {
       background-color: vars.$GButton;
+      cursor: pointer;
+
+      &:hover {
+        background-color: transparent;
+        border: vars.$GButton 2px solid;
+      }
     }
 
     .false {
       background-color: vars.$FButton;
+      cursor: pointer;
+      &:hover {
+        background-color: transparent;
+        border: vars.$FButton 2px solid;
+      }
     }
 
     .reset {
       background-color: vars.$RButton;
+      cursor: pointer;
+      &:hover {
+        background-color: transparent;
+        border: vars.$RButton 2px solid;
+      }
     }
 
     .button__other {
@@ -81,6 +98,7 @@ body {
       &:hover {
         background-color: transparent;
         border: vars.$GButton 2px solid;
+        cursor: pointer;
       }
   }
 
@@ -95,7 +113,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1060px) {
   #root {
     flex-direction: column;
 
@@ -110,7 +128,7 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   #root {
     header, ~ * {
       font-size: 8rem;
@@ -134,7 +152,7 @@ body {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 350px) {
   #root {
     header, ~ * {
       font-size: 4rem;
