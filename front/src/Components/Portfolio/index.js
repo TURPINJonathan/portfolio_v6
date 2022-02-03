@@ -1,4 +1,7 @@
 import React from "react";
+import { Download } from "react-feather";
+
+import { cv } from "../../assets/cv_turpin_jonahtan.pdf";
 
 // imports
 import './portfolio.scss';
@@ -30,6 +33,12 @@ const Portfolio = () => {
                 <p>Lorsqu'on est développeur web, tout est possible</p>
                 <p>tu n'as aucune limite, sinon celles que tu t'imposes</p>
             </section>
+            <button className="button__other" src="#" download>
+
+                <Download />
+                <i> Télécharger mon CV </i>
+                <Download />
+            </button>
         </main>
     );
 };
