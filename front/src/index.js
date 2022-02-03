@@ -10,13 +10,13 @@ import './styles/index.scss';
 
 // import components
 import Portfolio from './Components/Portfolio';
-import LetterJ from './Components/LetterJ';
+import LetterJ from './containers/LetterJ';
 import LetterO from './containers/LetterO';
 import LetterH from './Components/LetterH';
-import LetterN from './Components/LetterN';
+import LetterN from './containers/LetterN';
 import Nav from './Components/Layout/Nav';
 import Footer from './Components/Layout/Footer';
-import ArtWorkDetails from './Components/LetterO/ArtWorkDetails';
+import ArtWorkDetails from './containers/LetterO/ArtWorkDetails';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -37,7 +37,7 @@ ReactDOM.render(
             element={<LetterO />}
           />
           <Route
-            path="/o/artWork/test"
+            path="/o/artWork/:slug"
             element={<ArtWorkDetails />}
           />
           <Route
