@@ -23,7 +23,10 @@ const LetterJ = ({ loadUsers, users }) => {
                             {user.description}
                         </p>
                     </aside>
-                    <img src={user.picture} alt={`${user.firstname} ${user.lastname}`} id="tj-picture" />
+                    <div id="tj-picture">
+
+                        <img src={Turpin_Jonathan} alt={`${user.firstname} ${user.lastname}`} id="tj-image" />
+                    </div>
                 </article>
             ))}
             <Link

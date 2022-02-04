@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // imports
 import './letterN.scss';
@@ -10,7 +11,7 @@ const LetterN = ({ loadSkills, skills }) => {
     return (
         <main>
             <h2>Skills</h2>
-            <article>
+            <article id="skills">
                 <ul className="skillsList">
                     {skills.map(skill => (
 
@@ -21,6 +22,12 @@ const LetterN = ({ loadSkills, skills }) => {
                     ))}
                 </ul>
             </article>
+
+            <Link
+                to="/"
+            >
+                <button className="reset">Page d'accueil</button>
+            </Link>
         </main>
     );
 };

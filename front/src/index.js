@@ -9,14 +9,15 @@ import store from './store';
 import './styles/index.scss';
 
 // import components
-import Portfolio from './Components/Portfolio';
+import Portfolio from './containers/Portfolio';
 import LetterJ from './containers/LetterJ';
 import LetterO from './containers/LetterO';
-import LetterH from './Components/LetterH';
+import LetterH from './containers/LetterH';
 import LetterN from './containers/LetterN';
 import Nav from './Components/Layout/Nav';
 import Footer from './Components/Layout/Footer';
 import ArtWorkDetails from './containers/LetterO/ArtWorkDetails';
+import Error from './Components/Error';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -27,26 +28,36 @@ ReactDOM.render(
           <Route
             path="/"
             element={<Portfolio />}
+            exact
           />
           <Route
             path="/j/history"
             element={<LetterJ />}
+            exact
           />
           <Route
             path="/o/artWork"
             element={<LetterO />}
+            exact
           />
           <Route
             path="/o/artWork/:slug"
             element={<ArtWorkDetails />}
+            exact
           />
           <Route
             path="/h/contact"
             element={<LetterH />}
+            exact
           />
           <Route
             path="/n/skills"
             element={<LetterN />}
+            exact
+          />
+          <Route
+            path="*"
+            element={<Error />}
           />
         </Routes>
         <Footer />
