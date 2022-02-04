@@ -11,7 +11,7 @@ const LetterN = ({ loadSkills, skills }) => {
     return (
         <main>
             <h2>Skills</h2>
-            <article>
+            <article id="skills">
                 <ul className="skillsList">
                     {skills.map(skill => (
 
