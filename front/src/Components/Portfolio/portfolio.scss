@@ -9,31 +9,47 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        text-align: center;
 
         h1 {
             font-family: vars.$Allison;
             font-size: 12rem;
-                text-shadow: 1px 1px vars.$grey, -1px -1px black;
-            // text-shadow: 1px 3px 0 #969696, 1px 8px 5px vars.$grey;
+            text-shadow: 1px 1px vars.$grey, -1px -1px black;
+            display: flex;
+            margin: 7rem auto;
+            .firstname {
+                #j1, #t5 {
+                   color: vars.$JLetter;
+               }
+                #o2, #h6 {
+                    color: vars.$OLetter;
+                }
+                #n3, #a7 {
+                    color: vars.$HLetter;
+                }
+                #a4, #n8 {
+                    color: vars.$NLetter;
+                }
+            }
 
-            #j1, #t5, #t10, #i14 {
+            .lastname {
+               #t10, #i14 {
                 color: vars.$JLetter;
-                // text-shadow:  inset -2px -2px vars.$grey;
+                }
+                #u11, #n15 {
+                    color: vars.$OLetter;
+                }
                 
-            // text-shadow: 10px 10px 0 #969696, -10px -10px -10px vars.$grey;
+                #r12 {
+                    color: vars.$HLetter;
+                }
+                
+                #p13 {
+                    color: vars.$NLetter;
+                } 
             }
 
-            #o2, #h6, #u11, #n15 {
-                color: vars.$OLetter;
-            }
-            
-            #n3, #a7, #r12 {
-                color: vars.$HLetter;
-            }
-            
-            #a4, #n8, #p13 {
-                color: vars.$NLetter;
-            }
+             
         }
 
         p {
@@ -60,7 +76,18 @@ main {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1060px) {
+    main {
+      #mainPage {
+
+          p {
+              margin: 2rem;
+          }
+      }
+    }
+  }
+
+@media screen and (max-width: 800px) {
     main {
       #mainPage {
           h1 {
@@ -91,3 +118,18 @@ main {
         }
       }
     }
+    
+@media screen and (max-width: 330px) {
+    main {
+      #mainPage {
+          h1 {
+              height: 100%;
+              flex-direction: column;
+              font-size: 6rem;
+              .firstname {
+                  margin-bottom: 3rem;
+              }
+          }
+      }
+    }
+  }
