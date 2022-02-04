@@ -2,51 +2,67 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import store from './store';
 
 import './styles/index.scss';
 
 // import components
-import Portfolio from './Components/Portfolio';
-import LetterJ from './Components/LetterJ';
-import LetterO from './Components/LetterO';
-import LetterH from './Components/LetterH';
-import LetterN from './Components/LetterN';
+import Portfolio from './containers/Portfolio';
+import LetterJ from './containers/LetterJ';
+import LetterO from './containers/LetterO';
+import LetterH from './containers/LetterH';
+import LetterN from './containers/LetterN';
 import Nav from './Components/Layout/Nav';
 import Footer from './Components/Layout/Footer';
-import ArtWorkDetails from './Components/LetterO/ArtWorkDetails';
+import ArtWorkDetails from './containers/LetterO/ArtWorkDetails';
+import Error from './Components/Error';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Nav />
-      <Routes>
-        <Route
-          path="/"
-          element={<Portfolio />}
-        />
-        <Route
-          path="/j/history"
-          element={<LetterJ />}
-        />
-        <Route
-          path="/o/artWork"
-          element={<LetterO />}
-        />
-        <Route
-          path="/o/artWork/test"
-          element={<ArtWorkDetails />}
-        />
-        <Route
-          path="/h/contact"
-          element={<LetterH />}
-        />
-        <Route
-          path="/n/skills"
-          element={<LetterN />}
-        />
-      </Routes>
-      <Footer />
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Nav />
+        <Routes>
+          <Route
+            path="/"
+            element={<Portfolio />}
+            exact
+          />
+          <Route
+            path="/j/history"
+            element={<LetterJ />}
+            exact
+          />
+          <Route
+            path="/o/artWork"
+            element={<LetterO />}
+            exact
+          />
+          <Route
+            path="/o/artWork/:slug"
+            element={<ArtWorkDetails />}
+            exact
+          />
+          <Route
+            path="/h/contact"
+            element={<LetterH />}
+            exact
+          />
+          <Route
+            path="/n/skills"
+            element={<LetterN />}
+            exact
+          />
+          <Route
+            path="*"
+            element={<Error />}
+          />
+        </Routes>
+        <Footer />
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

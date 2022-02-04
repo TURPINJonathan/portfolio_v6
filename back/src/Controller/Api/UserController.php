@@ -16,7 +16,7 @@ class UserController extends AbstractController
     {
         $users = $userRepository->findAll();
         return $this->json(
-            [$users],
+            $users,
             Response::HTTP_OK,
             [],
             ['groups' => 'users_get']

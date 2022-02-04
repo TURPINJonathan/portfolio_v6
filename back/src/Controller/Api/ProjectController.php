@@ -17,7 +17,7 @@ class ProjectController extends AbstractController
     {
         $projects = $projectRepository->findAll();
         return $this->json(
-            [$projects],
+            $projects,
             Response::HTTP_OK,
             [],
             ['groups' => 'projects_get']

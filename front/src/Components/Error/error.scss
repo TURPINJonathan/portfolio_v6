@@ -1,0 +1,35 @@
+@use 'src/styles/vars';
+
+#error {
+    width: 100vw;
+    height: 100vh;
+    h1 {
+        font-family: vars.$Allison;
+        font-size: 11rem;
+        text-shadow: 1px 1px vars.$grey, -1px -1px black;
+        display: flex;
+        margin: 7rem auto;
+    
+        #e1 {
+            color: vars.$JLetter;
+        }
+        #r2 {
+            color: vars.$OLetter;
+        }
+        #r3 {
+            color: vars.$HLetter;
+        }
+        #o4 {
+            color: vars.$NLetter;
+        }
+        #r5 {
+            color: vars.$JLetter;
+        }
+    }
+    p {
+        font-size: 2rem;
+        color: vars.$grey;
+        font-family: vars.$Belle;
+        text-align: center;
+    }
+}

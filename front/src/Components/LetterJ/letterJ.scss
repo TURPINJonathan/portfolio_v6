@@ -5,26 +5,65 @@ main {
         width: 60vw;
         display: flex;
         justify-content: space-evenly;
-        border: vars.$grey solid 1px;
-        border-radius: 5px;
-        box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
-        -webkit-box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
+        // border: vars.$grey solid 1px;
+        // border-radius: 5px;
+        // box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
+        // -webkit-box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
+        // -moz-box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
 
         aside {
             color: vars.$grey;
             width: 100%;
             height: 100%;
-            padding: 2rem 0 2rem 2rem;
+            padding: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
         }
         #tj-picture {
-            width: 300px;
-            height: 400px;
-            border-radius: 0 50px 50px 0;
-            border: none;
+            width: 400px;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.26);
+            clip-path: polygon(22% 39%, 22% 0, 100% 0, 100% 100%, 22% 100%, 22% 54%, 0 54%);
+            // clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 30% 100%, 34% 75%, 0% 75%);
+            
+            #tj-image {
+                width: 80%;
+                height: 100%;
+            }
         }
+    }
+}  
+
+@media screen and (max-width: 1060px) {
+    main {
+        article {
+            width: 90vw;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    main {
+        article {
+            flex-direction: column;
+            align-items: center;
+            #tj-picture {
+                width: 50%;
+                justify-content: center;
+                clip-path: polygon(50% 0, 60% 25%, 100% 25%, 100% 100%, 0 100%, 0 25%, 40% 25%);
+
+                #tj-image {
+                    width: 80%;
+                    height: 60%;
+                    margin-top: 40%;
+                }
+            }
+        }
+
     }
 }

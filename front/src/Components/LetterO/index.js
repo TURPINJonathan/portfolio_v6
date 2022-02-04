@@ -1,34 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // imports
 import './letterO.scss';
 
-const LetterO = () => {
+const LetterO = ({ loadProjects, projects }) => {
+    useEffect(() => {
+        loadProjects();
+    }, []);
     return (
 
         // TODO: Make the media queries
 
         <main>
             <h2>Réalisations</h2>
-
             <section id="cards">
-                <article className="card">
-                    <h3 className="card__title">nom du site</h3>
-                    <img className="card__picture" src="https://via.placeholder.com/300x200" alt="nom du site" />
-                    <p className="card__overview">description du site</p>
+                {projects.map(project => (
+                    <article className="card" key={project.id}>
+                        <h3 className="card__title">{project.name}</h3>
+                        <img className="card__picture" src={project.picture} alt={`nom du site : ${project.name}`} />
+                        <p className="card__overview">{project.overview}</p>
 
-                    <Link className="card__details" to="/o/artWork/test">
-                        <button className="card__details true">Détails</button>
-                    </Link>
-                </article>
+                        <Link className="card__details" to={`/o/artWork/${project.id}`}>
+                            <button className="card__details true">Détails</button>
+                        </Link>
+                    </article>
+                ))}
             </section>
             <Link
                 to="/"
             >
                 <button className="reset">Page d'accueil</button>
             </Link>
-        </main>
+        </main >
     );
 };
 

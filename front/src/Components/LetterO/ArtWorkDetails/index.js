@@ -1,10 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 // imports
 import './artWorkDetails.scss';
 
-const ArtWorkDetails = () => {
+const ArtWorkDetails = ({ oneProject }) => {
+    const { slug } = useParams();
+    const projectId = parseInt(slug, 10);
+    const project = oneProject.find(project => project.id === projectId);
     return (
 
         // TODO: Make the media queries
@@ -13,13 +16,20 @@ const ArtWorkDetails = () => {
             <h2>projet</h2>
 
             <section id="project">
-                <img className="project__picture" src="https://via.placeholder.com/300x200" alt="nom du site" />
+                <div className="project__picture">
+                    <img className="project__picture-unit" src={project.picture} alt={project.name} />
+                </div>
                 <article className="project__details">
-                    <p className="project__overview">description du site</p>
+                    <p className="project__overview">{project.description}</p>
                     <p className="project__link">
-                        <a href="#" alt="Lien vers le site" target="_black">Link</a>
+                        <a href={project.linkUrl} alt={`Lien vers le site ${project.name}`} target="_black">Cliquez ici pour vous rendre sur {project.name}</a>
                     </p>
-                    <p className="project__techno">techno</p>
+                    <p className="project__techno">Techonologies utilisées</p>
+                    <ul className="project__technoList">
+                        {project.skills.map(skill => (
+                            <img src={skill.picture} alt={skill.name} className="skill__picture" />
+                        ))}
+                    </ul>
                 </article>
             </section>
             <section id="buttons">

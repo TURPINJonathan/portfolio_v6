@@ -1,40 +1,133 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import { Link, Navigate } from "react-router-dom";
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
+import url from "../../data";
 
 // imports
 import './letterH.scss';
 
-const LetterH = () => {
+const LetterH = ({
+    contact,
+    lastName,
+    firstName,
+    mail,
+    phone,
+    object,
+    message,
+    flash,
+    showFlash,
+}) => {
+    const form = useRef();
+
+    function flashError() {
+        toast.error('Une erreur est survenue. Avez-vous rempli l\'ensemble des champs obligatoires', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+    if (flash === 'redirect') {
+        showFlash('success');
+        return <Navigate from={`${url}h/contact`} to="/" />;
+    }
+
+    if (flash === 'error') {
+        flashError();
+    }
+
+    function sendEmail(e) {
+        e.preventDefault();
+        emailjs.sendForm('Portfolio', 'template_3vbu6bh', e.target, 'user_GTHS4qAqdmiSg5ss0FvgJ')
+            .then((response) => {
+                showFlash('redirect');
+            }, (error) => {
+                showFlash('error');
+            });
+        e.target.reset();
+    }
     return (
         // // TODO: Add a main and subtitle ("portfolio de Jonathan Turpin" "Formulaire de contact"
         // // TODO: Make the media queries
         // // TODO: Make the requiere
         <main>
             <h2>Contact</h2>
-            <form>
+            <form
+                ref={form}
+                onSubmit={(e) => {
+                    e.preventDefault();
+                    sendEmail(e);
+                }}
+            >
                 <fieldset>
                     <legend>Coordonnées</legend>
 
                     <div className="contactDetails">
                         <div className="contactDetails__input">
-                            <label htmlFor="name">Nom *</label>
-                            <input type="text" id="name" placeholder="Dupond" required />
+                            <label htmlFor="lastName">Nom *</label>
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder="Dupond"
+                                value={lastName}
+                                name="lastName"
+                                onChange={(e) => {
+                                    contact(e.target.value, "lastName");
+                                }}
+                                required
+                            />
                         </div>
 
                         <div className="contactDetails__input">
-                            <label htmlFor="firstname">Prénom *</label>
-                            <input type="text" id="firstname" placeholder="Jean" required />
+                            <label htmlFor="firstName">Prénom *</label>
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                placeholder="Jean"
+                                value={firstName}
+                                onChange={(e) => {
+                                    contact(e.target.value, "firstName");
+                                }}
+                                required
+                            />
                         </div>
                     </div>
 
                     <div className="contactDetails">
                         <div className="contactDetails__input">
-                            <label htmlFor="email">Email *</label>
-                            <input type="email" id="email" placeholder="jean@dupond.com" required />
+                            <label htmlFor="mail">Email *</label>
+                            <input
+                                type="email"
+                                id="mail"
+                                name="mail"
+                                value={mail}
+                                placeholder="jean@dupond.com"
+                                onChange={(e) => {
+                                    contact(e.target.value, "mail");
+                                }}
+                                required
+                            />
                         </div>
                         <div className="contactDetails__input">
                             <label htmlFor="phone">Téléphone</label>
-                            <input type="tel" id="phone" placeholder="06 01 02 03 04" />
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                value={phone}
+                                placeholder="06 01 02 03 04"
+                                onChange={(e) => {
+                                    contact(e.target.value, "phone");
+                                }}
+                            />
                         </div>
                     </div>
                 </fieldset>
@@ -45,18 +138,41 @@ const LetterH = () => {
 
                         <div className="contactDetails__input">
                             <label htmlFor="object">Objet *</label>
-                            <input type="text" id="object" placeholder="Objet du message" required />
+                            <input
+                                type="text"
+                                id="object"
+                                name="object"
+                                value={object}
+                                placeholder="Objet du message"
+                                onChange={(e) => {
+                                    contact(e.target.value, "object");
+                                }}
+                                required
+                            />
                         </div>
 
                         <div className="contactDetails__input">
                             <label htmlFor="message">Message *</label>
-                            <textarea id="message" placeholder="Votre message" required />
+                            <textarea
+                                id="message"
+                                name="message"
+                                value={message}
+                                placeholder="Votre message"
+                                onChange={(e) => {
+                                    contact(e.target.value, "message");
+                                }}
+                                required
+                            />
                         </div>
                     </div>
                 </fieldset>
                 <div className="buttons">
-                    <button className="true" type="submit">Envoyer</button>
-                    <button className="reset" type="reset">Réinitialiser</button>
+                    <div>
+                        <button className="true" type="submit">Envoyer</button>
+                    </div>
+                    <div>
+                        <button className="reset" type="reset">Réinitialiser</button>
+                    </div>
                     <Link
                         to="/"
                     >

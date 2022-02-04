@@ -1,1 +1,35 @@
 @use 'src/styles/vars';
+
+.skillsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+
+    .skillsList__details {
+        margin-bottom: 1.5rem;
+        .skill__picture {
+            width: 70px;
+            height: 70px;
+            margin: 1.5rem;
+        }
+
+        .skill__name {
+            // font-size: 1.2rem;
+            margin-top: -20px;
+            text-align: center;
+            color: vars.$grey;
+        }
+    }
+    
+}
+
+ 
+@media screen and (max-width: 1060px) {
+    main {
+        #skills {
+            width: 90vw;
+        }
+    }
+}
