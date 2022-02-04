@@ -111,6 +111,12 @@ main {
     main {
         form {
             width: 90vw;
+
+            .buttons {
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
         }
     }
 }

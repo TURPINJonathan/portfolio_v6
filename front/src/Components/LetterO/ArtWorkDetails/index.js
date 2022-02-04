@@ -16,7 +16,9 @@ const ArtWorkDetails = ({ oneProject }) => {
             <h2>projet</h2>
 
             <section id="project">
-                <img className="project__picture" src={project.picture} alt={project.name} />
+                <div className="project__picture">
+                    <img className="project__picture-unit" src={project.picture} alt={project.name} />
+                </div>
                 <article className="project__details">
                     <p className="project__overview">{project.description}</p>
                     <p className="project__link">

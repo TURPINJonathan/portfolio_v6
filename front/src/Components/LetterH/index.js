@@ -18,7 +18,6 @@ const LetterH = ({
     const form = useRef();
     function sendEmail(e) {
         e.preventDefault();
-        console.log(lastName);
         emailjs.sendForm('Portfolio', 'template_3vbu6bh', e.target, 'user_GTHS4qAqdmiSg5ss0FvgJ')
             .then((response) => {
                 console.log(response.status, response.text);
@@ -141,8 +140,12 @@ const LetterH = ({
                     </div>
                 </fieldset>
                 <div className="buttons">
-                    <button className="true" type="submit">Envoyer</button>
-                    <button className="reset" type="reset">Réinitialiser</button>
+                    <div>
+                        <button className="true" type="submit">Envoyer</button>
+                    </div>
+                    <div>
+                        <button className="reset" type="reset">Réinitialiser</button>
+                    </div>
                     <Link
                         to="/"
                     >

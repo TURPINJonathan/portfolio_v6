@@ -31,6 +31,7 @@ main {
                 font-weight: 800;
                 color: vars.$grey;
                 height: 10%;
+                text-align: center;
             }
 
             .card__picture {
@@ -44,8 +45,6 @@ main {
                 height: 20%;
                 text-align: center;
                 margin: 1rem;
-                overflow: hidden;
-                text-overflow: ellipsis;
             }
 
             &:hover {
@@ -53,3 +52,12 @@ main {
             }
         }
     }
+
+    
+@media screen and (max-width: 350px) {
+    main {
+        #cards {
+            width: 250px;
+        }
+    }
+}
