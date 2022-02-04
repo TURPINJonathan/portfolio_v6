@@ -1,4 +1,4 @@
-import { CONTACT_ME } from "../actions/contact";
+import { CONTACT_ME, SHOW_FLASH } from "../actions/contact";
 
 const initialState = {
     lastName: "",
@@ -7,6 +7,7 @@ const initialState = {
     phone: "",
     object: "",
     message: "",
+    flash: null,
 };
 
 function contact(state = initialState, action) {
@@ -46,6 +47,18 @@ function contact(state = initialState, action) {
                 default:
                     return state;
             }
+
+        case SHOW_FLASH:
+            return {
+                lastName: "",
+                firstName: "",
+                mail: "",
+                phone: "",
+                object: "",
+                message: "",
+                flash: action.newValue,
+            };
+
         default:
             return state;
     }

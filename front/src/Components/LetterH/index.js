@@ -1,6 +1,11 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
+import url from "../../data";
 
 // imports
 import './letterH.scss';
@@ -13,16 +18,38 @@ const LetterH = ({
     phone,
     object,
     message,
+    flash,
+    showFlash,
 }) => {
-
     const form = useRef();
+
+    function flashError() {
+        toast.error('Une erreur est survenue. Avez-vous rempli l\'ensemble des champs obligatoires', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+    if (flash === 'redirect') {
+        showFlash('success');
+        return <Navigate from={`${url}h/contact`} to="/" />;
+    }
+
+    if (flash === 'error') {
+        flashError();
+    }
+
     function sendEmail(e) {
         e.preventDefault();
         emailjs.sendForm('Portfolio', 'template_3vbu6bh', e.target, 'user_GTHS4qAqdmiSg5ss0FvgJ')
             .then((response) => {
-                console.log(response.status, response.text);
+                showFlash('redirect');
             }, (error) => {
-                console.log(error.status, error.text);
+                showFlash('error');
             });
         e.target.reset();
     }

@@ -1,15 +1,54 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Download } from "react-feather";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 import cv from "../../assets/cv_turpin_jonahtan.pdf";
 
 // imports
 import './portfolio.scss';
 
-const Portfolio = () => {
+const Portfolio = ({
+    flash,
+    showFlash,
+}) => {
+
+    function flashSuccess() {
+        toast.success('Votre message a été envoyé avec succès', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'colored',
+        });
+    }
+
+    useEffect(() => {
+        if (flash === 'success') {
+            flashSuccess();
+            showFlash(null);
+        }
+    }, [flash]);
+
     return (
         <main>
+
             <section id="mainPage">
+                <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
                 <p>Bienvenue sur le portfolio de</p>
                 <h1>
                     <div className="firstname">

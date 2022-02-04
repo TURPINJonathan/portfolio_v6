@@ -9,7 +9,7 @@ import store from './store';
 import './styles/index.scss';
 
 // import components
-import Portfolio from './Components/Portfolio';
+import Portfolio from './containers/Portfolio';
 import LetterJ from './containers/LetterJ';
 import LetterO from './containers/LetterO';
 import LetterH from './containers/LetterH';
