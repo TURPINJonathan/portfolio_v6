@@ -12,7 +12,7 @@ import './styles/index.scss';
 import Portfolio from './Components/Portfolio';
 import LetterJ from './containers/LetterJ';
 import LetterO from './containers/LetterO';
-import LetterH from './Components/LetterH';
+import LetterH from './containers/LetterH';
 import LetterN from './containers/LetterN';
 import Nav from './Components/Layout/Nav';
 import Footer from './Components/Layout/Footer';

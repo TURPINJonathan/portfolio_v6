@@ -30,19 +30,26 @@ main {
                 font-size: 1.5rem;
                 font-weight: 800;
                 color: vars.$grey;
+                height: 10%;
             }
 
             .card__picture {
                 width: 100%;
+                height: 60%;
             }
 
             .card__overview {
                 color: vars.$grey;
                 width: 100%;
+                height: 20%;
                 text-align: center;
-                margin: 0.5rem;
+                margin: 1rem;
                 overflow: hidden;
                 text-overflow: ellipsis;
+            }
+
+            &:hover {
+                background-color: rgba(32, 32, 32, 0.486);
             }
         }
     }
