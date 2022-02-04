@@ -1,6 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { GitHub, Linkedin, Mail } from "react-feather";
+import { GitHub, Linkedin } from "react-feather";
 
 // imports
 import './footer.scss';
@@ -26,13 +25,6 @@ const Footer = () => {
             >
                 <Linkedin color="#e69512" />
             </a>
-            <NavLink
-                to="/h/contact"
-                className="contact footer_link"
-                exact
-            >
-                <Mail color="#1231bd" className="footer__link" />
-            </NavLink>
         </footer>
     );
 };

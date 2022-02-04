@@ -17,6 +17,7 @@ import LetterN from './containers/LetterN';
 import Nav from './Components/Layout/Nav';
 import Footer from './Components/Layout/Footer';
 import ArtWorkDetails from './containers/LetterO/ArtWorkDetails';
+import Error from './Components/Error';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -27,26 +28,36 @@ ReactDOM.render(
           <Route
             path="/"
             element={<Portfolio />}
+            exact
           />
           <Route
             path="/j/history"
             element={<LetterJ />}
+            exact
           />
           <Route
             path="/o/artWork"
             element={<LetterO />}
+            exact
           />
           <Route
             path="/o/artWork/:slug"
             element={<ArtWorkDetails />}
+            exact
           />
           <Route
             path="/h/contact"
             element={<LetterH />}
+            exact
           />
           <Route
             path="/n/skills"
             element={<LetterN />}
+            exact
+          />
+          <Route
+            path="*"
+            element={<Error />}
           />
         </Routes>
         <Footer />

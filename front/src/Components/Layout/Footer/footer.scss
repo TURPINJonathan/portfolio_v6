@@ -13,13 +13,25 @@
     }
 }
 
-.footer__link>* {
-    min-width: 3rem;
-    min-height: 3rem;
+#footer {
+    width: 6.2rem;
+    height: 100vh;
+    .footer__link>* {
+        min-width: 3rem;
+        min-height: 3rem;
+        transition: all 0.5s ease-in-out;
 
-    &:hover {
-        animation: linkAnim 0.5s;
-        min-width: 6rem;
-        min-height: 6rem;
-    }
+        &:hover {
+            animation: linkAnim 0.5s;
+            min-width: 5.8rem;
+            min-height: 5.8rem;
+        }
+    } 
 }
+
+
+@media screen and (max-width: 1060px) {
+    #footer {
+        height: auto;
+    }
+  }
