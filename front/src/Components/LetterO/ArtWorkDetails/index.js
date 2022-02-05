@@ -10,8 +10,6 @@ const ArtWorkDetails = ({ oneProject }) => {
     const project = oneProject.find(project => project.id === projectId);
     return (
 
-        // TODO: Make the media queries
-
         <main>
             <h2>projet</h2>
 

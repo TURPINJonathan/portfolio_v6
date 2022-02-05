@@ -11,9 +11,6 @@ const LetterJ = ({ loadUsers, users }) => {
     }, []);
     return (
 
-        // TODO: Make the media queries
-        // TODO: Words corrections
-
         <main>
             <h2>Qui suis-je ?</h2>
             {users.map(user => (
