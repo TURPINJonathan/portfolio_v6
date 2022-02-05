@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Link, Navigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import PropTypes from 'prop-types';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -54,9 +55,6 @@ const LetterH = ({
         e.target.reset();
     }
     return (
-        // // TODO: Add a main and subtitle ("portfolio de Jonathan Turpin" "Formulaire de contact"
-        // // TODO: Make the media queries
-        // // TODO: Make the requiere
         <main>
             <h2>Contact</h2>
             <form
@@ -185,4 +183,16 @@ const LetterH = ({
     );
 };
 
+LetterH.propTypes = {
+
+    contact: PropTypes.func.isRequired,
+    lastName: PropTypes.string.isRequired,
+    firstName: PropTypes.string.isRequired,
+    mail: PropTypes.string.isRequired,
+    phone: PropTypes.number,
+    object: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+    flash: PropTypes.func.isRequired,
+    showFlash: PropTypes.func.isRequired,
+};
 export default LetterH;

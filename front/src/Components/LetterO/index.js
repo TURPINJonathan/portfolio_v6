@@ -10,8 +10,6 @@ const LetterO = ({ loadProjects, projects }) => {
     }, []);
     return (
 
-        // TODO: Make the media queries
-
         <main>
             <h2>Réalisations</h2>
             <section id="cards">
