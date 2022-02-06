@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.382a350f.chunk.css",
+    "main.js": "/static/js/main.065e5cb9.chunk.js",
+    "main.js.map": "/static/js/main.065e5cb9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.805c77be.js",
+    "runtime-main.js.map": "/static/js/runtime-main.805c77be.js.map",
+    "static/css/2.58a45539.chunk.css": "/static/css/2.58a45539.chunk.css",
+    "static/js/2.45215d5b.chunk.js": "/static/js/2.45215d5b.chunk.js",
+    "static/js/2.45215d5b.chunk.js.map": "/static/js/2.45215d5b.chunk.js.map",
+    "static/js/3.37234557.chunk.js": "/static/js/3.37234557.chunk.js",
+    "static/js/3.37234557.chunk.js.map": "/static/js/3.37234557.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.58a45539.chunk.css.map": "/static/css/2.58a45539.chunk.css.map",
+    "static/css/main.382a350f.chunk.css.map": "/static/css/main.382a350f.chunk.css.map",
+    "static/js/2.45215d5b.chunk.js.LICENSE.txt": "/static/js/2.45215d5b.chunk.js.LICENSE.txt",
+    "static/media/cv_turpin_jonahtan.4ade38b0.pdf": "/static/media/cv_turpin_jonahtan.4ade38b0.pdf",
+    "static/media/turpin_jonathan.6ea6d871.svg": "/static/media/turpin_jonathan.6ea6d871.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.805c77be.js",
+    "static/css/2.58a45539.chunk.css",
+    "static/js/2.45215d5b.chunk.js",
+    "static/css/main.382a350f.chunk.css",
+    "static/js/main.065e5cb9.chunk.js"
+  ]
+}
