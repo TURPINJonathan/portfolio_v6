@@ -21,6 +21,8 @@ security:
             lazy: true
             provider: app_user_provider
             custom_authenticator: App\Security\LoginAuthenticator
+            form_login:
+                default_target_path: admin
             logout:
                 path: app_logout
                 # where to redirect after logout
