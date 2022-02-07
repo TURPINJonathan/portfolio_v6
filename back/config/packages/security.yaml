@@ -20,9 +20,7 @@ security:
         main:
             lazy: true
             provider: app_user_provider
-            #custom_authenticator: App\Security\LoginAuthenticator
-            form_login:
-                default_target_path: App\Security\LoginAuthenticator
+            custom_authenticator: App\Security\LoginAuthenticator
             logout:
                 path: app_logout
                 # where to redirect after logout
