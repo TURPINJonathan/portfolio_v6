@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
-import cv from "../../assets/cv_turpin_jonahtan.pdf";
+import cv from "../../assets/cv_turpin_jonathan.pdf";
 
 // imports
 import './portfolio.scss';

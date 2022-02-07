@@ -168,9 +168,9 @@ const LetterH = ({
                     <div>
                         <button className="true" type="submit">Envoyer</button>
                     </div>
-                    <div>
+                    {/* <div>
                         <button className="reset" type="reset">Réinitialiser</button>
-                    </div>
+                    </div> */}
                     <Link
                         to="/"
                     >
