@@ -1,2 +1,2 @@
-const url = 'http://localhost:8002/';
+const url = 'https://turpin-jonathan.fr/back/';
 export default url;
