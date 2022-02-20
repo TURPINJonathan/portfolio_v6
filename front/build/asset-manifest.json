@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.3afb8432.chunk.css",
-    "main.js": "/static/js/main.0803ad82.chunk.js",
-    "main.js.map": "/static/js/main.0803ad82.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9b562874.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9b562874.js.map",
+    "main.css": "/static/css/main.14739ce2.chunk.css",
+    "main.js": "/static/js/main.89a85d6b.chunk.js",
+    "main.js.map": "/static/js/main.89a85d6b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.805c77be.js",
+    "runtime-main.js.map": "/static/js/runtime-main.805c77be.js.map",
     "static/css/2.58a45539.chunk.css": "/static/css/2.58a45539.chunk.css",
-    "static/js/2.a4d3234e.chunk.js": "/static/js/2.a4d3234e.chunk.js",
-    "static/js/2.a4d3234e.chunk.js.map": "/static/js/2.a4d3234e.chunk.js.map",
-    "static/js/3.f1b92242.chunk.js": "/static/js/3.f1b92242.chunk.js",
-    "static/js/3.f1b92242.chunk.js.map": "/static/js/3.f1b92242.chunk.js.map",
+    "static/js/2.45215d5b.chunk.js": "/static/js/2.45215d5b.chunk.js",
+    "static/js/2.45215d5b.chunk.js.map": "/static/js/2.45215d5b.chunk.js.map",
+    "static/js/3.37234557.chunk.js": "/static/js/3.37234557.chunk.js",
+    "static/js/3.37234557.chunk.js.map": "/static/js/3.37234557.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.58a45539.chunk.css.map": "/static/css/2.58a45539.chunk.css.map",
-    "static/css/main.3afb8432.chunk.css.map": "/static/css/main.3afb8432.chunk.css.map",
-    "static/js/2.a4d3234e.chunk.js.LICENSE.txt": "/static/js/2.a4d3234e.chunk.js.LICENSE.txt",
-    "static/media/jonathan_turpin_cv.eee8f691.pdf": "/static/media/jonathan_turpin_cv.eee8f691.pdf",
+    "static/css/main.14739ce2.chunk.css.map": "/static/css/main.14739ce2.chunk.css.map",
+    "static/js/2.45215d5b.chunk.js.LICENSE.txt": "/static/js/2.45215d5b.chunk.js.LICENSE.txt",
+    "static/media/jonathan_turpin_cv.7252e1ce.pdf": "/static/media/jonathan_turpin_cv.7252e1ce.pdf",
     "static/media/turpin_jonathan.6ea6d871.svg": "/static/media/turpin_jonathan.6ea6d871.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9b562874.js",
+    "static/js/runtime-main.805c77be.js",
     "static/css/2.58a45539.chunk.css",
-    "static/js/2.a4d3234e.chunk.js",
-    "static/css/main.3afb8432.chunk.css",
-    "static/js/main.0803ad82.chunk.js"
+    "static/js/2.45215d5b.chunk.js",
+    "static/css/main.14739ce2.chunk.css",
+    "static/js/main.89a85d6b.chunk.js"
   ]
 }
